@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Number Guessing Game</h1>
+    </header>
+
+    <!-- Die Hauptspielkarte, die den Spielinhalt enthält -->
+    <div class="game-card">
+      <!-- Headline mit Aufforderung, die Zahl zu erraten -->
+      <h2 id="headline">Bitte rate die Zahl!</h2>
+      <!-- Anzeige der Anzahl der Versuche -->
+      <p id="displayTries">Versuche: 0</p>
+
+      <!-- Formular für die Eingabe der Zahl und den Raten-Button -->
+      <form onsubmit="guessTheNumber(); return false;">
+        <!-- Eingabefeld für die Zahl -->
+        <input
+          id="myNumber"
+          type="number"
+          required
+          placeholder="Zahl von 0 bis 100"
+          min="0"
+          max="100"
+        />
+        <!-- Button zum Absenden des Ratenversuchs -->
+        <button type="submit" id="guessButton">Raten!</button>
+      </form>
+      <!-- Button zum Neustart des Spiels -->
+      <button id="resetButton" class="reset-btn" onclick="resetGame()">
+        Neues Spiel
+      </button>
+    </div>
+
+    <script src="script.js" defer></script>
+    <!-- Einbindung der Bibliothek für das Konfetti, das beim Gewinn angezeigt wird -->
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+  </body>
+</html>

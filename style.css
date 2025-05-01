@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+/* Allgemeine Styles für html und body */
+html,
+body {
+  height: 100%; /* Die Höhe des gesamten Dokuments */
+  margin: 0; /* Standard-Margin entfernen */
+  font-family: "Open Sans", sans-serif;
+  background-color: #161b2c;
+  color: white;
+  padding-top: 32px; /* Oberer Abstand */
+}
+
+/* Alle Elemente erhalten Box-Sizing Border-Box (wichtig für Layout) */
+* {
+  box-sizing: border-box;
+}
+
+/* Header mit Hintergrundfarbe und zentriertem Text */
+header {
+  background-color: #1a2336;
+  padding: 16px 20px; /* Innenabstände */
+  text-align: center;
+  font-size: 26px;
+  font-weight: 600; /* Fettere Schrift */
+}
+
+/* Die "Spielkarte" mit dem eigentlichen Spielinhalt */
+.game-card {
+  background-color: #1a2336;
+  padding: 32px; /* Innenabstände */
+  border-radius: 16px; /* Abgerundete Ecken */
+  max-width: 400px; /* Maximale Breite der Karte */
+  margin: 120px auto; /* Automatische horizontale Ausrichtung, Abstand oben */
+  text-align: center; /* Text zentrieren */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Schattenwurf für die Karte */
+  opacity: 0; /* Zunächst unsichtbar */
+  animation: fadeIn 1s forwards; /* Animation für das Einblenden der Karte */
+}
+
+/* Keyframe-Animation für das sanfte Einblenden der "Spielkarte" */
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Start: unsichtbar */
+    transform: scale(0.9); /* Start: etwas verkleinert */
+  }
+  to {
+    opacity: 1; /* Ende: vollständig sichtbar */
+    transform: scale(1); /* Ende: Normalgröße */
+  }
+}
+
+/* Überschrift des Spiels (innerhalb der "game-card") */
+h2 {
+  font-weight: 400;
+}
+
+/* Button-Styles */
+button {
+  background-color: #c2185b;
+  color: white;
+  border: unset; /* Keine Standardgrenze */
+  padding: 12px; /* Innenabstand */
+  border-radius: 4px; /* Abgerundete Ecken */
+  min-width: 160px; /* Minimale Breite */
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%),
+    0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
+  transition: background-color 0.3s; /* Übergangseffekt für die Hintergrundfarbe */
+}
+
+/* Button-Styles für den Hover-Effekt */
+button:hover {
+  background-color: #d63475;
+}
+
+/* Button-Styles, wenn er deaktiviert ist */
+button:disabled {
+  background-color: #9e4d6b;
+  cursor: not-allowed; /* Cursor zeigt "nicht erlaubt" an */
+}
+
+/* Input-Feld für die Zahleneingabe */
+input {
+  padding: 12px; /* Innenabstand */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Randfarbe */
+  width: 160px;
+  color: white;
+  background-color: transparent;
+  border-radius: 4px;
+  margin-bottom: 16px; /* Abstand nach unten */
+}
+
+/* Fokuszustand für das Input-Feld */
+input:focus {
+  outline: none; /* Entfernen des Standard-Rahmens */
+  border: 1px solid #c2185b; /* Randfarbe bei Fokus */
+}
+
+/* Stil für den "Neues Spiel"-Button */
+.reset-btn {
+  background-color: #1a2336;
+  border: 2px solid #c2185b;
+  margin-top: 16px; /* Abstand nach oben */
+  width: 100%; /* Volle Breite */
+  font-weight: 600;
+  color: #c2185b;
+  cursor: pointer;
+}
+
+.reset-btn:hover {
+  background-color: #c2185b;
+  color: white;
+}
+
+/* Anzeige der Versuche */
+#displayTries {
+  font-size: 18px;
+  margin-top: 16px;
+}
+
+/* Responsive Design: Anpassungen für kleinere Bildschirmgrößen */
+@media (max-width: 850px) {
+  header {
+    font-size: 20px;
+    padding: 16px;
+  }
+
+  .game-card {
+    margin: 60px 20px;
+    padding: 24px;
+  }
+}
