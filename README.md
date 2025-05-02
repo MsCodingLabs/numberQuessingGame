@@ -3,7 +3,7 @@
 Test your number guessing skills! Try to guess a randomly selected number between 0 and 100 in as few attempts as possible. After each guess, you'll get a hint if the number is higher or lower. Can you guess the number quickly? Challenge your friends and celebrate with confetti when you win! 🎉
 
 ## Screenshot
-![numberQuessingGame.png]( https://github.com/MsCodingLabs/quizze/blob/main/quizze.png)
+![numberQuessingGame.png]( https://github.com/MsCodingLabs/numberQuessingGame/blob/main/numberGuessingGame.png)
 
 
 ## ✨ Features
